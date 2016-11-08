@@ -15,7 +15,7 @@
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error){
-        die("connection failed: ".$conn->connect_error);
+        die("Konekcija nije uspela:".$conn->connect_error);
     }
    
    
@@ -26,13 +26,13 @@
     $odgovor4 =   $_REQUEST["odg4"];
     $tacan =   $_REQUEST["tac"];
     
-        $sql = "INSERT INTO pitanja (pitanje, odgovori1, odgovori2, odgovori3, odgovori4, tacan_odgovor)
+        $zamena = "INSERT INTO pitanja (pitanje, odgovori1, odgovori2, odgovori3, odgovori4, tacan_odgovor)
         VALUES ( '$pitanje', '$odgovor1', '$odgovor2','$odgovor3','$odgovor4', '$tacan')";
 
-            if ($conn->query($sql) === TRUE) {
+            if ($conn->query($zamena) === TRUE) {
             echo "New record created successfully";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $zamena . "<br>" . $conn->error;
         }
     
     
