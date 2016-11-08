@@ -40,7 +40,7 @@
         $sql_read =  "SELECT pitanje, odgovori1,odgovori2,odgovori3,odgovori4, tacan_odgovor FROM pitanja";
             $result = $conn->query($sql_read);
             if ($result->num_rows > 0) {
-            // output data of each row
+ 
             while($row = $result->fetch_assoc()) {
                 echo "id: " . $row["pitanje"]. " - Name: " . $row["odgovori1"]. " " . $row["odgovori2"]. "<br>";
             }
