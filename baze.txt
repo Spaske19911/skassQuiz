@@ -1,4 +1,5 @@
 
+
 //android_quiz
 
 CREATE TABLE pitanja(
@@ -7,7 +8,9 @@ odgovori1 varchar(20),
 odgovori2 varchar(20),
 odgovori3 varchar(20),
 odgovori4 varchar(20),
-tacan_odgovor int
+tacan_odgovor varchar(20),
+kategorija varchar(20)
+
 );
 
 
@@ -20,7 +23,12 @@ vreme double
 );
 
 
-
+CREATE TABLE login
+(
+id integer,
+code varchar(500),
+status int
+);
 
 
 
